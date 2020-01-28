@@ -1,0 +1,284 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    background-repeat: no-repeat;
+}
+a{
+    transition: 0.1s;
+}
+
+.nav-main{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 80px;
+    background-color: rgb(38, 233, 217);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+.btn-tgl-nav{
+    width: 80px;
+    height: 100%;
+    background-color: rgb(145, 192, 145);
+    cursor: pointer;
+    background-position: center;
+    text-align: center;
+    font-size: 56px;
+}
+.btn-tgl-nav:hover{
+    background-color: blueviolet;
+    opacity: 0.9;
+}
+.nav-main ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    
+}
+.nav-main ul li{
+    list-style: none;
+    line-height: 40px;
+    
+}
+.nav-main ul li a{
+   display: block;
+   height: 100%;
+   padding: 0 10px;
+   text-transform: uppercase;
+   text-decoration-color: rgb(240, 11, 240);
+   color: blueviolet
+
+}
+a:hover{
+    opacity: 0.5;
+}
+.nav-sidebar{
+    position: fixed;
+    
+    left: 0;
+    width: 0px;
+    height: 100%;
+    padding: 0 10px;
+    background-color: black;
+    top: 80px;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+.nav-sidebar ul{
+    padding-top: 15px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.nav-sidebar ul li{
+    line-height: 60px;
+    list-style: none;
+}
+.nav-sidebar ul li span , .nav-sidebar ul li a{
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: azure;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+#container{
+    background-blend-mode: multiply;
+    width: 600px;
+    height: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: auto;
+    color: rgb(170, 33, 163);
+    
+}
+#header{
+    background-color: rgb(20, 50, 218);
+    color: white;
+    text-align : center;
+    position: relative;
+    transition:  2s;
+    border-radius: 20px;
+}
+
+
+#content{
+    padding: 20px;
+    white-space: inherit;
+    position: relative;
+}
+#nav{
+    width: 150px;
+    float: left;
+}
+#main{
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 10%;
+    display: none;
+
+}
+#simcal{
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 10%;
+    display: none;
+
+}
+#footer{
+    clear: both;
+    background-color: indigo;
+    text-align: right;
+    color:white;
+    margin-right: 0;
+
+}
+#result{
+    background-color: chartreuse;
+    width: fit-content;
+    color:blue;
+}
+#calcresult{
+    background-color: chartreuse;
+    width: fit-content;
+    color:blue;
+}
+#welcomemsg{
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    top: 50%;
+    color: rgb(138, 165, 42);
+}
+#conbtn{
+    display: inline-block;
+    background-color: brown;
+    padding: 15px 32px;
+    border: none;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 30%;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+#conbtn span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+#conbtn span:after{
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+#conbtn:hover span{
+    padding-right: 25px;
+
+    
+}
+#conbtn:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+#input1,#kyakaru,#operator{
+    background-color: rgb(141, 97, 182);
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    color: aliceblue;
+    
+}
+#value1,#num1,#num2{
+    background-color: lightcyan;
+    border: none;
+    border-radius: 20px;
+    height: 3%;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#settings{
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    right: -10px;
+    top: -10px;
+    
+}
+#settings:hover{
+    transition: ease-in-out 1s;
+    width: 60px;
+    height: 60px;
+    right: -20px;
+    top: -20px;
+}
+.settingcontent{
+    display: none;
+    position: relative;
+    top: 70%;
+    left: 10%;
+    opacity: 1;
+    transition: all 1s;
+    color: greenyellow;
+}
+#procards{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    background-color: rgba(63, 63, 190,0);
+    justify-items: center;
+    
+}
+.pros{
+    display: flex;
+    width: 220px;
+    height: 150px;
+    background-color: rgba(10, 198, 245, 0.8);
+    transition: all 0.5s;
+    box-shadow: 5px 5px grey;
+    color: honeydew;
+    text-align: center;
+    border-radius: 20px;
+    
+}
+.pros:hover{
+    transform: rotate(360deg) scale(1.5);
+    background-color: rgba(10, 198, 245, 1);
+}
+#info{
+    text-align: center;
+    color: brown;
+}
+
+.pros a{
+    color: cornsilk;
+    transform: skewY(-10deg);
+    color: chocolate;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.pros a:hover{
+    opacity: 1;
+    text-shadow: 1px 1px blue;
+}
+
+
+
+

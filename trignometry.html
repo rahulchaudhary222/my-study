@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body{
+        text-align: center;
+        font-size: 30px;
+        color: blanchedalmond;
+        background-color: darkslateblue;
+    } 
+    #tr , #ang , #go{
+        width: 50px;
+        height: 30px;
+        background-color: black;
+        color: blanchedalmond;
+
+    }   
+    footer{
+        color: coral;
+    }
+    p{
+        color: chartreuse;
+    }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trigonometric ratios</title>
+</head>
+<body>
+    Trigonomertric ratio
+    <select id="tr">
+        <option value="sin">sin</option>
+        <option value="cos">cos</option>
+        <option value="tan">tan</option>
+        <option value="cosec">cosec</option>
+        <option value="sec">sec</option>
+        <option value="cot">cot</option>
+    </select> 
+    <input id="ang" type="number"  ><br>
+    <button type="button" id="go" onclick="foo()"> GO </button>
+    <p id="answere" ></p>
+    <h4>write down your question and answere without theta e.g("sinX" should be written as "sin" only)</h4>
+    <h4>always put required things in brackects e.g{tan/(1-cot)}</h4>
+    <h4>WRITE COSEC AS "CSC"</h4>
+    <h4>hit solve and enjoy...</h4>
+    
+    question
+    <input id="ques" type="text">
+    answere
+    <input id="ans" type="text">
+    <button onclick="joo()">solve</button>
+    <p id="isit"></p>
+    <footer>copyright &copy; rahul chaudhary</footer>
+</body>
+
+<script>
+
+
+
+foo = () => {
+    let tr = (document.querySelector("#tr").value) ;
+    console.log(tr);
+    console.log(typeof(tr));
+    let ang = parseInt(document.querySelector("#ang").value) ; 
+    let indeg = Math.PI * ang / 180 ;
+    let ans;
+    if(tr == "sin"){ ans = Math.round(Math.sin(indeg)*100)/100}
+    else if(tr == "cos"){ ans = Math.round(Math.cos(indeg)*100)/100}
+    else if(tr == "tan"){ ans =  Math.round(Math.tan(indeg)*100)/100}
+    else if(tr == "cosec"){ ans = Math.round(1 / Math.sin(indeg)*100)/100}
+    else if(tr == "sec"){ ans = Math.round(1 / Math.cos(indeg)*100)/100}
+    else if(tr == "cot"){ ans = Math.round(1 / Math.tan(indeg)*100)/100}
+    console.log(ang);
+    console.log(indeg);
+    console.log(ans);
+    document.querySelector("#answere").innerHTML = ans;
+}
+joo = () => {
+    let q = document.querySelector("#ques").value ;
+   
+    var q1 = q.replace(/csc/gi , 1/Math.sin(Math.PI/3));
+    var q2 = q1.replace(/cos/gi , Math.cos(Math.PI/3));
+    var q3 = q2.replace(/tan/gi , Math.tan(Math.PI/3));
+    var q4 = q3.replace(/sec/gi , 1/Math.cos(Math.PI/3));
+    var q5 = q4.replace(/sin/gi , Math.sin(Math.PI/3));
+    var q6 = q5.replace(/cot/gi , 1/Math.tan(Math.PI/3));
+    
+    var qval = Math.round(eval(q6)*100)/100;
+    console.log(qval);
+    //now for answere
+
+    let a = document.querySelector("#ans").value ;
+   
+    var a1 = a.replace(/csc/gi , 1/Math.sin(Math.PI/3));
+    var a2 = a1.replace(/cos/gi , Math.cos(Math.PI/3));
+    var a3 = a2.replace(/tan/gi , Math.tan(Math.PI/3));
+    var a4 = a3.replace(/sec/gi , 1/Math.cos(Math.PI/3));
+    var a5 = a4.replace(/sin/gi , Math.sin(Math.PI/3));
+    var a6 = a5.replace(/cot/gi , 1/Math.tan(Math.PI/3));
+    
+    var aval = Math.round(eval(a6)*100)/100;
+    console.log(aval);
+    
+    qval == aval ? document.querySelector("#isit").innerHTML = "CORRECT ANSWERE" :
+    document.querySelector("#isit").innerHTML = "WRONG ANSWERE"
+    
+
+}
+
+
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+body{
+    background-color: aquamarine;
+    text-align: center;
+    color: azure;
+   
+}
+.btn{
+    background-color: chartreuse;
+    border-radius: 20%;
+    
+}
+.cardwhole{
+    display: inline-block;
+    background-color: rgb(35, 95, 43);
+    height: 200px;
+    width: 400px;
+    text-align: right;
+    color: azure;
+    
+}
+.cardside{
+    position: absolute;
+    background-color: brown;
+    height: 200px;
+    width: 150px;
+    clip-path: polygon(0 0 ,100% 0 ,60% 100% , 0 100%);
+    top: 9px;
+    text-align: left;
+}
+.cardtri{
+    position: absolute;
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    top: 9px;
+    border-radius: 0%;
+}
+#name1{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+#pos{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+#con{
+    margin-top: 60px;
+    margin-right: 5px;
+}
+#canvascard{
+    background-color: white;
+}
+

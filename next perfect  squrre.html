@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            next perfect square
+        </title>
+    </head>
+    <body>
+        <div>
+        number bta koi sa  <input type="text" id="numbta">
+    </br>
+        <button onclick="g()"> jhappa jhu!!! </button>
+        </div>
+        <div id="result">
+
+        </div>
+    </body>
+    <script>
+    const g = (inp) => {
+    var ans;
+    var inp = parseFloat(document.querySelector("#numbta").value) ;
+    
+    
+    /*var rut = Math.sqrt(inp);
+    var rndoff = Math.floor(rut);
+    var sqr = rndoff + 1 ;
+    ans = sqr*sqr;
+    document.querySelector("#result").innerHTML = "next perfect square is " + ans;*/
+    var a = Math.floor(Math.log(inp)/Math.log(2) + 1);
+    document.querySelector("#result").innerHTML = "next power of 2 is " + Math.pow(2,a);
+    
+    }
+    
+
+</script>
+</html>

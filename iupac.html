@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    body{
+        cursor: grab;
+        padding: 0;
+        background-color: indigo;
+    }    
+    #cb{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        width:100%;
+        height: 60vh;
+        background-color: rgb(92, 8, 33);
+        color: linen;
+        text-align: center;
+        font-size: 50px;
+    } 
+    #bag{
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        background-color: teal;
+    }
+    .name{
+        background-color: hotpink;
+        margin: 0;
+    }
+    #nam{
+        display: inline;
+    }
+    .el{
+        width: fit-content;
+        height: fit-content;
+        background-color:  rgb(92, 8, 33);
+        font-size: 35px;
+        padding: 2px 10px;
+        color: linen;
+        text-align: center;
+    } 
+    .stc{
+        font-size: 44px;
+        justify-self: end;
+        transition: 0.3s;
+    }
+    .enc{
+        font-size: 43px;
+        justify-self: start;
+        transition: 0.3s;
+    }
+    .ch2{
+        font-size: 43px;
+        transition: 0.3s;
+    
+    }
+    .stc:hover , .enc:hover , .ch2:hover{
+        transform: scale(1.1);
+    }
+    .iodo{
+        font-size: 44px;
+        grid-row-start: 2;
+    }
+    .chloro{
+        font-size: 44px;
+        grid-row-start: 2;
+    }
+    .bromo{
+        font-size: 44px;
+        grid-row-start: 2;
+    }
+    .one{
+        font-size: 44px;
+        grid-row-start: 2;
+    }
+    .al{
+        font-size: 44px;
+    }
+    .oicacid{
+        font-size: 35px;
+    }
+    .ol{
+        font-size: 44px;
+    }
+    #btn{
+        float: right;
+        background-color: lawngreen;
+        color: maroon;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    p{
+        font-size: 35px;
+        font-weight: 900;
+        display: inline;
+    }
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IUPAC NOMENCLATURE</title>
+</head>
+<body>
+    <div id="cb">
+        <div class="stc">CH3-</div>
+        
+    </div>
+    <div class="name"><p>IUPAC-</p><p id="nam"></p><button id="btn" onclick="nomenclature()">NamE iT</button></div>
+    <div id="bag">
+        <div class="el" onclick="addch2()">CH2</div>
+        <div class="el" onclick="addch3()">CH3</div>
+        <div class="ol el" onclick="addol()">-OH</div>
+        <div class="oicacid el" onclick="addcooh()">-COOH</div>
+        <div class="al el" onclick="addal()">-CHO</div>
+        <div class="el" onclick="uthana('one')">||<br>O</div>
+        <div class="el" onclick="uthana('chloro')">Cl</div>
+        <div class="el" onclick="uthana('bromo')">Br</div>   
+        <div class="el" onclick="uthana('iodo')">I</div>     
+    </div>
+    <p class="ch2 enc iodo oicacid"></p>
+    <p class="enc"></p>
+</body>
+<script>
+
+
+var uthaya;
+var lagaya;
+var methane = "-CH2-";
+var cls = 'ch2';
+var num = 1 ;
+var toshow = "";
+var neareest;
+
+
+addch3 = () =>{
+    methane = "-CH3";
+    cls = 'enc'
+    addch2();
+}
+addcooh = () => {
+    methane = "-COOH";
+    cls = 'oicacid';
+    lagaya = "oic acid";
+    document.querySelector(".oicacid").style.display = "none";
+    document.querySelector(".ol").style.display = "none";
+    document.querySelector(".al").style.display = "none";
+    addch2();
+}
+addol = () => {
+    methane = "-OH";
+    cls = "enc";
+    lagaya = "ol";
+    num--;
+    document.querySelector(".oicacid").style.display = "none";
+    document.querySelector(".ol").style.display = "none";
+    document.querySelector(".al").style.display = "none";
+    addch2();
+}
+addal = () => {
+    methane = "-CHO";
+    cls = "enc";
+    lagaya = "al";
+    document.querySelector(".oicacid").style.display = "none";
+    document.querySelector(".ol").style.display = "none";
+    document.querySelector(".al").style.display = "none";
+    addch2();
+}
+
+addch2 = () =>{
+    num++;
+    document.querySelector("#cb").innerHTML += `<div class='${cls}' onclick="lagana(${num})">${methane}</div>` ;
+
+    return{num};
+}
+uthana = (x) => {
+        uthaya = x ;
+        console.log(uthaya);
+}
+lagana = (no) => {
+    if(uthaya == "bromo"){toshow = "|<br>B"}
+    else if(uthaya=="iodo"){toshow = "|<br>I"}
+    else if(uthaya=="chloro"){toshow = "|<br>Cl"}
+    else if(uthaya=="one"){toshow = "O"}   
+    document.querySelector("#cb").innerHTML += `<div class=${uthaya}>${toshow}</div>`;
+    document.querySelector(`.${uthaya}`).style.gridColumnStart = no ;
+    no <= num/2 ? neareest = no : neareest = 1 + num - no  ;
+    lagaya = uthaya;
+    
+    return(lagaya , neareest);
+}
+nomenclature = () =>{
+    var kitna = "meth";
+    if(num==2){kitna="eth"}
+    else if(num==3){kitna="prop"}
+    else if(num==4){kitna="but"}
+    else if(num==5){kitna="pent"}
+    else if(num==6){kitna="hex"}
+    else if(num==7){kitna="hept"}
+    else if(num==8){kitna="oct"}
+    else if(num==9){kitna="non"}
+    else if(num==10){kitna="dec"}
+    
+    if(!lagaya){
+        document.querySelector("#nam").textContent = `${kitna}an` ;
+        }
+    if(lagaya == "bromo"|| lagaya == "iodo" || lagaya == "chloro"){
+        document.querySelector("#nam").textContent = `${neareest}-${lagaya}-` + document.querySelector("#nam").textContent ;
+        }
+    if(lagaya == "oic acid" || lagaya == "al" || lagaya == "ol"){
+
+        document.querySelector("#nam").textContent = `${kitna}an` ;
+        document.querySelector("#nam").textContent += `${lagaya}`;
+        }
+    if(lagaya == "one"){
+        document.querySelector("#nam").textContent += `-${neareest}-${lagaya}` ;
+    }
+}
+</script>
+</html>

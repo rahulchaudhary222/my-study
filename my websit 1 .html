@@ -1,0 +1,101 @@
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>
+                rahul's website
+            </title>
+                <link rel ="stylesheet" type ="text/css" href ="mywebsitestyle.css" />
+    </head>
+    <body>
+        <body background="mychess.png">
+        <div>
+           
+            <nav class="nav-main">
+                    <div class="btn-tgl-nav" onclick="togglenav()">&#9776;</div>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href ="#">about us</a></li>
+                        <li><a href = "#">gallery</a></li>
+                        <li><a href ="#">contact</a></li>
+                    </ul>
+                    <div id="settings" onclick="showsett()">
+                        <h1 class="settingcontent" id="nigmod" onclick="nightmode()">night mode</h1>
+                        <h1 class="settingcontent" id="daymod">day mode</h1>
+                    </div>
+            </nav>
+            <div>
+            <aside class="nav-sidebar">
+                <ul>
+                    <li><span>projects</span></li>
+                    <li><a href ="htm.html">visiting card buider</a></li>
+                    <li><a class="teperaturec" href ="#">temperature converter</a></li>
+                    <li><a class="simcalbtn" href="#">simple calculator</a></li>
+                    <li><a href="gaddhtm.html">cards game</a></li>
+                    <li><a href="trignometry.html"></a>trigonometry</a></li>
+                    </ul>
+                </aside>
+        </div></br></br></br></br></br>
+        <div id="container" onclick="closeall()">
+            <div id="header">
+                <h1 id="tools">  TOOLS &#x1f608; </h1>
+                </div>
+                    <div id="content"> 
+                        <div id="simcal">
+                        <h2> CALCULATOR</h2>
+                        <form>
+                            NUMBER <input type="number" id="num1">
+                            NUMBER <input type="number" id="num2">
+                            <select id="kyakaru">
+                                <option value="add">add</option>
+                                <option value="sub">subtract</option>
+                                <option value="div">devide</option>
+                                <option value="mul">multiply</option>
+                            </select>
+                            
+                        </form>
+                        <div id="calcresult"></div>
+                        <button id="conbtn" style="vertical-align: middle" onclick="c()"><span>CALCULATE</span></button>
+                    </div>
+                    <div id="main">
+                        <h2> TEMPERATURE CONVERTER </h2></br>
+                         <form>
+                             TEMP IN <select id="input1">
+                                 <option value="K">Kelvin</option>
+                                 <option value="F">Ferenhiet</option>
+                                 <option value="C">Celcius</option></br>
+                             </select> <input type="text" id="value1"></br></br>
+                             CONVERT TO: 
+                             <select id="operator">
+                                 <option value="K">Kelvin</option>
+                                 <option value="F">Ferenhiet</option>
+                                 <option value="C">Celcius</option>
+                             </select>
+                             <button style="vertical-align: middle" id="conbtn" onclick="g()"><span>CONVERT</span></button>
+                         </form>
+                         <div id="result"></div></br>
+                     </div>
+                 </div>
+                 
+            </div>
+        <div id="info">
+            <h1 id="ghum">PLAY AND LEARN</h1>
+            <H3>BELOW ARE SOME HIGH SCHOOL PROJECTS THAT CAN HELP YOU LEARN SOME OF THE MOST COMMON CONCEPTS OF SCIENCE AND MATHS SO WHY WAIT JUST CLICK BELOW CARDS AND DISCOVER THE FUN OF LEARNING!</H3>
+        </div>
+        <div id="procards" >
+            <div class="pros"><a href ="refraction.html"><h1>REFRACTION</h1><p>learn refraction practically by spherical lenses click it to go to refraction section</p></a></div>
+            <div class="pros"><a href="trignometry.html"><h1>TRIGNOMETRY</h1><p>do trigmometry stuff like angles n ratios ps-you can solve trig ratio's questions of IIT level</p></a></div>
+            <div class="pros iupac"><a href="iupac.html"><h1>IUPAC</h1><p>play with iupac nomenclature learn it by making some cool compounds</p></a></div>
+            <div class="pros"><h1>COMING SOON</h1></div>
+            <div class="pros"><h1>COMING SOON</h1></div>
+            <div class="pros"><h1>COMING SOON</h1></div>
+        </div>
+        <div id = "footer">
+                copyright &#169; 2019 rahul solanki
+            </div>
+</body>
+
+
+<script src="main.js"></script>
+
+</html>

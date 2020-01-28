@@ -1,0 +1,187 @@
+body{
+    background-color: rgb(0, 0, 0);
+  
+}
+.table{
+    position: absolute;
+    width: 1300px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: green;
+}
+.player{
+    background-color: aqua;
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    text-align: center;
+    color: blue;
+}
+.card1{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.card0{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#dealer{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+    top: 550px;
+    left: 600px;
+    text-align: center;
+    color: aliceblue;
+    cursor: grab;
+}
+#dealer:hover{
+    width: 120px;
+    height: 120px;
+    background-color: crimson;
+    left: 590px;
+    top: 540px;
+    transition: 0.5s;
+
+}
+#stack{
+    width: 150px;
+    height: 50px;
+    background-color: azure;
+    position: absolute;
+    top: 300px;
+    left: 575px;
+    display: none;
+}
+#stack1{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    text-align: center;
+}
+#stack2{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    text-align: center;
+}
+#stack3{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    text-align: center;
+}
+#stack4{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 90px;
+    bottom: 0;
+    text-align: center;
+}
+#stack5{
+    width: 30px;
+    height: 40px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+    text-align: center;
+}
+#player1{
+    
+    top: 50px;
+    left: 600px;
+}
+#player2{
+    top: 100px;
+    left: 900px;
+}
+#player3{
+    top: 200px;
+    left: 1100px;
+}
+#player4{
+    top: 400px;
+    left: 1100px;
+}
+#player5{
+    top: 500px;
+    left: 900px;
+}
+#player6{
+    top: 500px;
+    left: 300px;
+}
+#player7{
+    top: 400px;
+    left: 100px;
+}
+#player8{
+    top: 200px;
+    left: 100px;
+}
+#player9{
+    top: 100px;
+    left: 300px;
+}
+#card11 , #card12, #card21, #card22, #card31, #card32, #card41, #card42, #card51,
+ #card52, #card61, #card62, #card71, #card72, #card81, #card82, #card91, #card92{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding: 0%;
+}
+
+#nu11 ,#nu12,#nu21,#nu22,#nu31,#nu32,#nu41,#nu42,#nu51,#nu52,#nu61,#nu62,#nu71,#nu72,#nu81,#nu82,#nu91,#nu92{
+    position: absolute;
+    top: 0;
+    margin-top: 1px;
+    margin-left: 25%;
+}
+.nbtn{
+    width: 80px;
+    height: 30px;
+    background-color: brown;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: grab;
+    
+}
+.nbtn:hover{
+    width: 90px;
+    height: 35px;
+    background-color: crimson;
+    left: 595px;
+    top: 397.5px;
+    transition: 0.5s;
+}
+#quit{
+    position: absolute;
+    top: 600px;
+    left: 1200px;
+}
